@@ -1,15 +1,15 @@
-package com.eden.dolphin.broker.xtp.api;
+package com.eden.dolphin.broker.xtp.handler;
 
 import com.eden.dolphin.broker.xtp.XTPBroker;
 import com.zts.xtp.common.model.ErrorMessage;
 import com.zts.xtp.quote.model.response.*;
 import com.zts.xtp.quote.spi.QuoteSpi;
 
-public class XTPQuoteApi implements QuoteSpi {
+public class XTPQuoteHandler implements QuoteSpi {
 
     private XTPBroker broker;
 
-    public XTPQuoteApi(XTPBroker broker){
+    public XTPQuoteHandler(XTPBroker broker){
         this.broker = broker;
     }
 
@@ -35,7 +35,9 @@ public class XTPQuoteApi implements QuoteSpi {
 
     @Override
     public void onDepthMarketData(DepthMarketDataResponse depthMarketData, DepthMarketDataExResponse depthQuote) {
+        System.out.println("onDepthMarketData");
         System.out.println(depthMarketData);
+        System.out.println(depthQuote);
     }
 
     @Override

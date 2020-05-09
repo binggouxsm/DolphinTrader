@@ -8,7 +8,7 @@ import java.util.Map;
 
 public interface Broker {
 
-    public void connect(Map<String,Object> settings);
+    public void connect(Map<String,String> settings);
 
     public void close();
 

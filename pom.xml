@@ -11,6 +11,7 @@
         <module>trade-common</module>
         <module>trade-core</module>
         <module>trade-broker-parent</module>
+        <module>event-driver</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -30,6 +31,18 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>25.1-jre</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-client -->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>4.7.0</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

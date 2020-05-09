@@ -53,7 +53,7 @@ public abstract class AbstractBroker implements Broker{
 
 
     @Override
-    public abstract void connect(Map<String, Object> settings);
+    public abstract void connect(Map<String, String> settings);
 
     @Override
     public abstract void close();

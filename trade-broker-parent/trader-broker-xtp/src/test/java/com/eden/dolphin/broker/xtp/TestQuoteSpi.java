@@ -142,8 +142,8 @@ public class TestQuoteSpi implements QuoteSpi {
     @Override
     public void onDepthMarketData(DepthMarketDataResponse depthMarketData, DepthMarketDataExResponse depthQuote) {
         System.out.println("onDepthMarketData");
-//        System.out.println(depthMarketData);
-//        System.out.println(depthQuote);
+        System.out.println(depthMarketData);
+        System.out.println(depthQuote);
     }
 
     @Override

@@ -1,9 +1,9 @@
 package com.eden.dolphin.core.event;
 
+import com.eden.dolphin.core.event.impl.MemoryEventEngine;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -11,8 +11,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class EventEngineTest {
 
-    @Autowired
-    private EventEngine engine;
+
+    private EventEngine engine = new MemoryEventEngine();
 
     @Before
     public void init(){
@@ -31,7 +31,7 @@ public class EventEngineTest {
         engine.register("EventB",new HandlerB());
         engine.register(EventType.ALL.toString(),new HandlerC());
 
-        new Thread(engine).start();
+        new Thread((Runnable) engine).start();
     }
 
 }
